@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPF Voting System</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+<div class="max-w-5xl mx-auto p-6">
+
+   
+    <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold">
+            African Plan Foundation Voting System
+        </h1>
+
+        <p class="text-gray-600">
+            HOH (Head of House) Election
+        </p>
+
+        <p class="mt-2 text-lg">
+            Total Members: <span class="font-bold">20</span>
+        </p>
+
+        <p>
+            Votes Cast:
+            <span id="votesCast" class="font-bold text-blue-600">0</span>/20
+        </p>
+    </div>
+
+        <div class="bg-white rounded-lg shadow p-6">
+
+        <h2 class="text-xl text-center font-bold mb-4">
+            Cast Your Vote
+        </h2>
+
+        <table class="w-full border">
+            
+            <form class="max-w-sm mx-auto">
+            <label for="countries" class="block mb-2.5 text-sm font-medium text-heading">Voter</label>
+            <select id="countries" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body">
+                <option selected>Select Name</option>
+                <option value="kosi">lucky</option>
+                <option value="austine">Amara</option>
+                
+            </select>
+            </form>
+     
+
+            <br>
+            <br>
+            <form class="max-w-sm mx-auto">
+            <label for="countries" class="block mb-2.5 text-sm font-medium text-heading">Candidate</label>
+            <select id="countries" class="block w-full px-3 py-2.5 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body">
+                <option selected>Select Candidate</option>
+                <option value="kosi">Kosi</option>
+                <option value="austine">Austine</option>
+                
+            </select>
+            </form>
+
+            
+        </table>
+<br>
+<br>
+               <div class="flex justify-end w-full">
+  <button class="px-4 py-2 bg-blue-600 text-white rounded">
+    <h1>Cast Vote</h1>
+    
+  </button>
+
+  </div>
+
+    </div>
+
+    <br>
+    <br>
+
+
+
+<div class="flex justify-end w-full">
+  <card class="px-4 py-2 bg-blue-600 text-white rounded">
+    <h1>voter count</h1>
+    <h3>Candidate1:</h3>
+    <h3>Candidate2:</h3>
+  </card>
+
+  
+</div>
+
+<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<button command="show-modal" commandfor="dialog" class="rounded-md bg-blue-950/5 px-2.5 py-1.5 text-sm font-semibold text-red-900 hover:bg-blue-950/10">Check Result</button>
+<el-dialog>
+  <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
+    <el-dialog-backdrop class="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
+
+    <div tabindex="0" class="flex min-h-full items-end justify-center p-4 text-center focus:outline-none sm:items-center sm:p-0">
+      <el-dialog-panel class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95">
+        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div class="mx-auto flex size-12 shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:size-10">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-red-600">
+                <path d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+              <h3 id="dialog-title" class="text-base font-semibold text-gray-900">ELECTION WINNER</h3>
+              <div class="mt-2">
+                <p class="text-sm text-gray-500">The winner of the election is:</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+          <button type="button" command="close" commandfor="dialog" class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-red-500 sm:ml-3 sm:w-auto">Close</button>
+          
+        </div>
+      </el-dialog-panel>
+    </div>
+  </dialog>
+</el-dialog>
+
+</body>
+</html>

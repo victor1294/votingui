@@ -1,0 +1,5 @@
+Catches errors before runtime — Type checking flags bugs at compile time rather than in production. Passing a string where a number is expected (add("2", 3)) errors immediately instead of silently producing "23".
+Better autocomplete and tooling — Because the editor knows the shape of your data, you get accurate IntelliSense, inline documentation, and go-to-definition. In JS, the editor is often guessing.
+Self-documenting contracts via interfaces — Defining interface User { id: number; name: string } makes the expected structure explicit, so other developers (and future you) know exactly what a function accepts and returns without reading its body.
+Safer refactoring at scale — Renaming a field or changing a function signature surfaces every affected call site as a compile error. In a large JS codebase, the same change relies on find-and-replace and hoping you caught everything.
+Advanced type features — Generics, enums, union types, and utility types (Partial<T>, Pick<T>) let you express precise, reusable constraints that JavaScript simply can't enforce, e.g. function first<T>(arr: T[]): T preserves the element type through the call.
